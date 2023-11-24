@@ -2,8 +2,10 @@ import React from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import useAuth from '../../hook/useAuth';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 const LoginWithGoogle = () => {
     const { signInWithGoogle } = useAuth()
+    const navigate = useNavigate();
     const handClick = () => {
         signInWithGoogle()
             .then(res => {
@@ -12,10 +14,11 @@ const LoginWithGoogle = () => {
                         autoClose: 2000,
                         position: "bottom-right"
                     })
+                    navigate("/")
                 }
             })
             .catch(err => {
-                toast(err, {
+                toast(`${err}`, {
                     autoClose: 2000,
                     position: "bottom-right"
                 })
