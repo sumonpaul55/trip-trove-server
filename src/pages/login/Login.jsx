@@ -42,11 +42,11 @@ const Login = () => {
                     <form onSubmit={formik.handleSubmit} className='space-y-4'>
                         <div>
                             <label htmlFor="">Email</label>
-                            <input type="email" onChange={formik.handleChange} value={formik.values.name} placeholder='Email' className='w-full p-1 rounded-md text-slate-600 font-semibold outline-0 border' />
+                            <input type="email" id='email' onChange={formik.handleChange} value={formik.values.name} placeholder='Email' className='w-full p-1 rounded-md text-slate-600 font-semibold outline-0 border' />
                         </div>
                         <div className='relative'>
                             <label htmlFor="">Password</label>
-                            <input type={`${showPass ? "text" : "password"}`} onChange={formik.handleChange} value={formik.values.name} className='w-full p-1 rounded-md text-slate-600 font-semibold outline-0 border' placeholder='Password' />
+                            <input type={`${showPass ? "text" : "password"}`} id='password' onChange={formik.handleChange} value={formik.values.name} className='w-full p-1 rounded-md text-slate-600 font-semibold outline-0 border' placeholder='Password' />
                             <div className='absolute right-4 text-primary top-[33px] cursor-pointer' onClick={() => setShowPass(!showPass)}>
                                 {
                                     showPass ? <FaEye /> : <FaEyeSlash />
