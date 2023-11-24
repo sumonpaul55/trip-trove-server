@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 import MainLayout from '../layout/MainLayout';
 import Home from '../pages/home/Home';
+import Community from '../pages/home/community/Community';
 
 const router = createBrowserRouter([
     {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>
+            },
+            {
+                path: "community",
+                element: <Community></Community>
             }
         ]
     },

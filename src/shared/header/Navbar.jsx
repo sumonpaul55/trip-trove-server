@@ -1,29 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from "../../assets/logo.png"
 import useAuth from '../../hook/useAuth';
 import "./navbar.css"
+import { FaBars } from "react-icons/fa";
+
 const Navbar = () => {
     const { user } = useAuth();
+    const [navToggle, setNavToggle] = useState(true)
+
     return (
-        <nav>
+        <nav className='absolute z-10b bg-primary bg-opacity-20 left-0 top-0 right-0 text-white  py-2'>
             <div className="container mx-auto">
                 <div className="flex gap-2 justify-between items-center">
                     <div className="logo">
                         <Link to="/"> <img src={logo} alt="logo" className='w-1/2 md:w-52 pt-1' /></Link>
                     </div>
-                    <ul className="navbar flex gap-4">
-                        <NavLink className="text-primary font-semibold md:text-lg">Home</NavLink>
-                        <NavLink className="text-primary font-semibold md:text-lg">Community</NavLink>
-                        <NavLink className="text-primary font-semibold md:text-lg">Blogs</NavLink>
-                        <NavLink className="text-primary font-semibold md:text-lg">About Us</NavLink>
-                        <NavLink className="text-primary font-semibold md:text-lg">Contact Us</NavLink>
+                    <ul className={`navbar bg-indigo-400 md:bg-transparent md:static flex gap-4 absolute -left-full w-full duration-200 flex-col md:flex-row top-14 justify-center items-center md:justify-end py-5 md:py-0 ${!navToggle ? "left-0" : null}`}>
+                        <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')} onClick={() => setNavToggle(!navToggle)}>Home</NavLink>
+                        <NavLink to="/community" className={({ isActive }) => (isActive ? 'active' : 'inactive')} onClick={() => setNavToggle(!navToggle)}>Community</NavLink>
+                        <NavLink to="/blogs" className={({ isActive }) => (isActive ? 'active' : 'inactive')} onClick={() => setNavToggle(!navToggle)}>Blogs</NavLink>
+                        <NavLink to="/about-us" className={({ isActive }) => (isActive ? 'active' : 'inactive')} onClick={() => setNavToggle(!navToggle)}>About Us</NavLink>
+                        <NavLink to="/contact-us" className={({ isActive }) => (isActive ? 'active' : 'inactive')} onClick={() => setNavToggle(!navToggle)}>Contact Us</NavLink>
                         {
                             user ?
-                                <NavLink className="text-primary font-semibold md:text-lg border px-2 rounded-md">Logout</NavLink> :
-                                <NavLink className="text-primary font-semibold md:text-lg border px-2 rounded-md">Login</NavLink>
+                                <NavLink to="/logout" className={({ isActive }) => (isActive ? 'active' : 'inactive')} onClick={() => setNavToggle(!navToggle)}>Logout</NavLink> :
+                                <NavLink to="/login" className={({ isActive }) => (isActive ? 'active' : 'inactive')} onClick={() => setNavToggle(!navToggle)}>Login</NavLink>
                         }
                     </ul>
+                    <button onClick={() => setNavToggle(!navToggle)} className='md:hidden'>
+                        <FaBars size={20} />
+                    </button>
                 </div>
             </div>
         </nav>

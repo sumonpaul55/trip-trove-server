@@ -1,3 +1,9 @@
-nav a.active {
-    color: rgb(214, 15, 48)
+nav .active {
+    color: red;
+    font-weight: 600;
+}
+
+nav .inactive {
+    color: white;
+    font-weight: 600;
 }
