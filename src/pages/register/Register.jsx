@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaEye } from 'react-icons/fa';
 import { FaEyeSlash } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LoginWithGoogle from '../../components/loginWithGoogle/LoginWithGoogle';
 // import useAxiosPublic from '../../hook/useAxiosPublic';
 import axios from 'axios';
@@ -15,6 +15,9 @@ const Register = () => {
     const [showPass, setShowPass] = useState(false)
     // const axiosPublic = useAxiosPublic();
     const { signUp } = useAuth()
+    const location = useLocation();
+    const navigate = useNavigate()
+
     const handleSignIn = async (e) => {
         e.preventDefault();
         const form = e.target;
@@ -40,6 +43,7 @@ const Register = () => {
                             photoURL: image
                         }).then()
                         toast(`Welcome ${res?.user?.displayName}`, { autoClose: 2000, position: "bottom-right" })
+                        navigate(location?.state ? location?.state : "/")
                     }
                 }).catch(err => {
                     toast(err.message, {

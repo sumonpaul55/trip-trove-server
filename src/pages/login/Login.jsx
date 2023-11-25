@@ -3,12 +3,14 @@ import LoginWithGoogle from '../../components/loginWithGoogle/LoginWithGoogle';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import useAuth from '../../hook/useAuth';
 import { toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 
 const Login = () => {
     const [showPass, setShowPass] = useState(false)
     const { logIn } = useAuth()
+    const navigate = useNavigate()
+    const location = useLocation();
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -24,6 +26,7 @@ const Login = () => {
                             autoClose: 2000,
                             position: "bottom-right"
                         })
+                        navigate(location.pathname ? location.pathname : "/")
                     }
                 }).catch(err => {
                     toast(err, {
@@ -33,7 +36,6 @@ const Login = () => {
                 })
         },
     });
-
     return (
         <section className='mt-14'>
             <div className="container mx-auto">
@@ -42,11 +44,12 @@ const Login = () => {
                     <form onSubmit={formik.handleSubmit} className='space-y-4'>
                         <div>
                             <label htmlFor="">Email</label>
-                            <input type="email" id='email' onChange={formik.handleChange} value={formik.values.name} placeholder='Email' className='w-full p-1 rounded-md text-slate-600 font-semibold outline-0 border' />
+                            <input type="email" id='email' name="email" onChange={formik.handleChange} value={formik.values.name} placeholder='Email' className='w-full p-1 rounded-md text-slate-600 font-semibold outline-0 border' />
                         </div>
                         <div className='relative'>
                             <label htmlFor="">Password</label>
-                            <input type={`${showPass ? "text" : "password"}`} id='password' onChange={formik.handleChange} value={formik.values.name} className='w-full p-1 rounded-md text-slate-600 font-semibold outline-0 border' placeholder='Password' />
+
+                            <input type={`${showPass ? "text" : "password"}`} name='password' id='password' onChange={formik.handleChange} value={formik.values.name} className='w-full p-1 rounded-md text-slate-600 font-semibold outline-0 border' placeholder='Password' />
                             <div className='absolute right-4 text-primary top-[33px] cursor-pointer' onClick={() => setShowPass(!showPass)}>
                                 {
                                     showPass ? <FaEye /> : <FaEyeSlash />
