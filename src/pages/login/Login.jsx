@@ -26,10 +26,11 @@ const Login = () => {
                             autoClose: 2000,
                             position: "bottom-right"
                         })
-                        navigate(location.pathname ? location.pathname : "/")
+                        navigate(location?.pathname ? location?.pathname : "/")
                     }
-                }).catch(err => {
-                    toast(err, {
+                })
+                .catch((err) => {
+                    toast(`${err}`, {
                         autoClose: 2000,
                         position: "bottom-right"
                     })

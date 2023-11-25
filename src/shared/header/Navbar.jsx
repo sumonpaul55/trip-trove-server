@@ -15,18 +15,18 @@ const Navbar = () => {
         setNavToggle(!navToggle)
         logOut()
             .then(() => {
-                toast(`You have loggout successfully`, {
+                toast("You have loggout successfully", {
                     autoClose: 2000,
                     position: "bottom-right"
                 })
-                    .catch(err => {
-                        toast(err, {
-                            autoClose: 2000,
-                            position: "bottom-right"
-                        })
-                    })
+            }).catch(err => {
+                toast(`${err}`, {
+                    autoClose: 2000,
+                    position: "bottom-right"
+                })
             })
     }
+
     // hide the dropdown option after clicking any where in the divice
     const handledropDown = (e) => {
         setIsOpenDashBoard(!isOpenDashboaed);
@@ -73,7 +73,7 @@ const Navbar = () => {
             </div>
         </nav>
 
-    );
+    )
 };
 
 export default Navbar;

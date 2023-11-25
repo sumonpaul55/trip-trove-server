@@ -1,0 +1,65 @@
+[
+    {
+        "spot_photo": "https://i.ibb.co/ZBHJvp6/toure1.jpg",
+        "tour_type": "City Tour",
+        "trip_title": "Discover Downtown Delights",
+        "price": "$50",
+        "tour_guide_name": "Sumon Paul",
+        "tour_guide_email": "sumon@gmail.com",
+        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+    },
+    {
+        "spot_photo": "https://i.ibb.co/M9pJt1X/tour2.jpg",
+        "tour_type": "Nature Excursion",
+        "trip_title": "Serene Forest Retreat",
+        "price": "$80",
+        "tour_guide_name": "Sumon Paul",
+        "tour_guide_email": "sumon@gmail.com",
+        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+    },
+    {
+        "spot_photo": "https://i.ibb.co/r2QXtG2/tour3.jpg",
+        "tour_type": "Historical Journey",
+        "trip_title": "Time Travel in Old Town",
+        "price": "$65",
+        "tour_guide_name": "Sumon Paul",
+        "tour_guide_email": "sumon@gmail.com",
+        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+    },
+    {
+        "spot_photo": "https://i.ibb.co/qjYm1fL/tour-4.jpg",
+        "tour_type": "Beach Escape",
+        "trip_title": "Sun, Sand, and Surf",
+        "price": "$75",
+        "tour_guide_name": "Sumon Paul",
+        "tour_guide_email": "sumon@gmail.com",
+        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+    },
+    {
+        "spot_photo": "https://i.ibb.co/9g00nmk/toure.jpg",
+        "tour_type": "Adventure Expedition",
+        "trip_title": "Mountain Summit Trek",
+        "price": "$120",
+        "tour_guide_name": "Sumon Paul",
+        "tour_guide_email": "sumon@gmail.com",
+        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+    },
+    {
+        "spot_photo": "https://i.ibb.co/PNNL33F/tour-place.jpg",
+        "tour_type": "Cultural Immersion",
+        "trip_title": "Art and Heritage Walk",
+        "price": "$55",
+        "tour_guide_name": "Sumon Paul",
+        "tour_guide_email": "sumon@gmail.com",
+        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+    },
+    {
+        "spot_photo": "https://i.ibb.co/QK0qmyb/cox.jpg",
+        "tour_type": "Foodie Paradise",
+        "trip_title": "Gastronomic Delights Tour",
+        "price": "$70",
+        "tour_guide_name": "Sumon Paul",
+        "tour_guide_email": "sumon@gmail.com",
+        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+    }
+]
