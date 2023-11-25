@@ -2,19 +2,41 @@ import React from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import useAuth from '../../hook/useAuth';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import useAxiosPublic from '../../hook/useAxiosPublic';
 const LoginWithGoogle = () => {
     const { signInWithGoogle } = useAuth()
+    const axiosPublic = useAxiosPublic();
     const navigate = useNavigate();
+    const location = useLocation()
     const handClick = () => {
         signInWithGoogle()
             .then(res => {
                 if (res.user) {
-                    toast(`Welcome ${res.user.displayName}`, {
-                        autoClose: 2000,
-                        position: "bottom-right"
-                    })
-                    navigate("/")
+                    const userName = res.user?.displayName
+                    const userInfo = {
+                        name: userName,
+                        email: res.user?.email,
+                        role: "user"
+                    }
+                    axiosPublic.post("/users", userInfo)
+                        .then((res) => {
+                            // console.log(res.data)
+                            if (res.data.insertedId === null) {
+                                toast(`Welcome Back ${userName}`, {
+                                    position: "bottom-right",
+                                    autoClose: 2000
+                                })
+                                navigate(location?.path ? location?.pathname : "/")
+                            }
+                            else if (res.data?.insertedId) {
+                                toast(`Welcome ${userName}`, {
+                                    position: "bottom-right",
+                                    autoClose: 2000
+                                })
+                                navigate(location?.path ? location?.pathname : "/")
+                            }
+                        })
                 }
             })
             .catch(err => {

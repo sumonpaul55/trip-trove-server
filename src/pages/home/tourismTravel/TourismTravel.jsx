@@ -10,7 +10,7 @@ const TourismTravel = () => {
     const { packages } = usePackages()
     // console.log(packages)
     return (
-        <section className='py-20 px-1'>
+        <section className='py-20 px-1 overflow-hidden'>
             <div className="container m-auto">
                 <h1 className='text-xl md:text-2xl my-10 font-bold xl:text-3xl'>Tourism and Travel Guide</h1>
                 <Tabs className="text-center">
@@ -21,8 +21,8 @@ const TourismTravel = () => {
                     </TabList>
                     {/* content */}
                     <TabPanel>
-                        <div className='grid grid-cols-1 md:grid-cols-2 gap-7'>
-                            <div className='text-start p-3'>
+                        <div className='grid grid-cols-1 lg:grid-cols-2 gap-7'>
+                            <div className='text-start p-3 flex flex-col justify-evenly' data-aos="fade-right" data-aos-duration="1000">
                                 <div>
                                     <h3 className='font-bold md:text-xl mb-3'>Passionate Experts</h3>
                                     <p className='text-slate-600'>Our tour guides are not just knowledgeable; they are enthusiasts who breathe life into every destination. With a deep love for travel and a wealth of local insights, they are committed to ensuring that every moment of your journey is infused with authentic experiences.</p>
@@ -36,7 +36,7 @@ const TourismTravel = () => {
                                     <p className='text-slate-600'>Your safety and comfort are our top priorities. Our guides are well-trained, certified professionals who not only guide you through the best routes but also ensure a secure and enjoyable experience at every turn.</p>
                                 </div>
                             </div>
-                            <div className='p-5'>
+                            <div className='p-5' data-aos="fade-left" data-aos-duration="1000">
                                 <img src={overview} className='rounded-lg' alt="" />
                             </div>
                         </div>

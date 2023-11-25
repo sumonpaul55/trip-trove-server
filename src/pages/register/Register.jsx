@@ -8,6 +8,7 @@ import axios from 'axios';
 import useAuth from '../../hook/useAuth';
 import { updateProfile } from 'firebase/auth';
 import { toast } from 'react-toastify';
+import useAxiosPublic from '../../hook/useAxiosPublic';
 const image_apiKey = import.meta.env.VITE_IMAGE_API_KEY
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_apiKey}`
 
@@ -17,9 +18,12 @@ const Register = () => {
     const { signUp } = useAuth()
     const location = useLocation();
     const navigate = useNavigate()
+    const axiosPublic = useAxiosPublic()
+    const [processing, setProcessing] = useState(false)
 
     const handleSignIn = async (e) => {
         e.preventDefault();
+        setProcessing(true)
         const form = e.target;
         const imageFile = form.image.files[0]
         // Create FormData object
@@ -42,7 +46,19 @@ const Register = () => {
                             displayName: name,
                             photoURL: image
                         }).then()
-                        toast(`Welcome ${res?.user?.displayName}`, { autoClose: 2000, position: "bottom-right" })
+                        const userInfo = {
+                            name: name,
+                            email: email,
+                            role: "user"
+                        }
+                        //show loder while clicked to add user
+                        axiosPublic.post("/users", userInfo)
+                            .then(() => {
+                                setProcessing(false)
+                                toast(`Welcome ${name}`, { autoClose: 2000, position: "bottom-right" })
+                                console.log(userInfo)
+                                // console.log(res.data)
+                            })
                         navigate(location?.state ? location?.state : "/")
                     }
                 }).catch(err => {
@@ -111,6 +127,11 @@ const Register = () => {
                     <LoginWithGoogle></LoginWithGoogle>
                 </div>
             </div>
+            {
+                processing && <div className='fixed top-0 left-0 h-screen w-screen bg-black bg-opacity-40 flex justify-center items-center'>
+                    <div className='animate-spin p-4 bg-black'></div>
+                </div>
+            }
         </section>
     );
 };
