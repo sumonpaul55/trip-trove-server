@@ -16,6 +16,7 @@ const LoginWithGoogle = () => {
                     const userName = res.user?.displayName
                     const userInfo = {
                         name: userName,
+                        userImg: res.user?.photoURL,
                         email: res.user?.email,
                         role: "user"
                     }

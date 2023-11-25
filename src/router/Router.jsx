@@ -8,6 +8,8 @@ import Community from '../pages/home/community/Community';
 import Register from '../pages/register/Register';
 import Login from '../pages/login/Login';
 import AllPackages from '../pages/allPackages/AllPackages';
+import Dashboard from '../pages/dashBoard/Dashboard';
+import Myprofile from '../pages/dashBoard/Myprofile/Myprofile';
 
 const router = createBrowserRouter([
     {
@@ -35,6 +37,16 @@ const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: "dashboard",
+        element: <Dashboard></Dashboard>,
+        children: [
+            {
+                path: "myProfile",
+                element: <Myprofile></Myprofile>
+            }
+        ]
+    }
 ]);
 
 

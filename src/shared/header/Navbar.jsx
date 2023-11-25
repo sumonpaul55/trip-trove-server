@@ -54,7 +54,7 @@ const Navbar = () => {
                                     <img src={user?.photoURL} referrerPolicy='no-referrer' className='w-10 h-10 rounded-full cursor-pointer' alt="" onClick={handledropDown} />
                                     <div onClick={(e) => e.stopPropagation()} className={`space-y-2 bg-slate-700 text-white absolute top-16 p-4 ${isOpenDashboaed ? "block" : "hidden"}`}>
                                         <button className='font-semibold w-full hover:text-pink-500' onClick={handleLogout}>Logout</button>
-                                        <NavLink to="/contact-us" className="font-semibold w-full hover:text-pink-500 text-center block" onClick={() => setNavToggle(!navToggle)}>Dashboard</NavLink>
+                                        <NavLink to="/dashboard" className="font-semibold w-full hover:text-pink-500 text-center block" onClick={() => setNavToggle(!navToggle)}>Dashboard</NavLink>
                                         <div className='pt-3'>
                                             <h5 className='font-thin border-b'>User Info</h5>
                                             <h3 className=''>{user.displayName}</h3>
