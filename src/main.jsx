@@ -10,7 +10,9 @@ import AuthProvider from './provider/AuthProvider'
 import { ToastContainer } from 'react-toastify'
 import { HelmetProvider } from 'react-helmet-async';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-AOS.init();
+AOS.init({
+  duration: 2000,
+});
 
 const queryClient = new QueryClient()
 

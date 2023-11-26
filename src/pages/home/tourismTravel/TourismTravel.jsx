@@ -5,9 +5,11 @@ import { FaHeart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import usePackages from '../../../hook/usePackages';
 import overview from "../../../assets/overview.jpg"
+import useGetTourGuide from '../../../hook/useGetTourGuide';
 const TourismTravel = () => {
     const { packages } = usePackages()
-    // console.log(packages)
+    const { tourGuide } = useGetTourGuide()
+
     return (
         <section className='py-20 px-1 overflow-hidden'>
             <div className="container m-auto">
@@ -59,7 +61,7 @@ const TourismTravel = () => {
                                             <h4>Type: {items.tour_type}</h4>
                                             <h4 className='font-bold text-primary'>Price: ${items.price}</h4>
                                         </div>
-                                        <button className='py-1 px-2 bg-pink-600 text-white w-full mt-6'>View Packages</button>
+                                        <Link to={`/package-details/${items._id}`}><button className='py-1 px-2 bg-pink-600 text-white w-full mt-6'>View Packages</button></Link>
                                     </div>
                                 ))
                             }
@@ -69,7 +71,22 @@ const TourismTravel = () => {
                         </div>
                     </TabPanel>
                     <TabPanel>
-                        <h2>Any content 2</h2>
+                        <div className='grid grid-cols-1 md:grid-cols-2 items-start gap-5 p-8' data-aos="fade-right" data-aos-duration="1000">
+                            {
+                                tourGuide?.map((items, idx) => (
+                                    <div key={idx} className=' border p-2 flex justify-start'>
+                                        <div>
+                                            <img src={items.userImg} className='w-40 h-40 rounded-lg' alt={items.name} />
+                                        </div>
+                                        <div className='flex-1 flex flex-col justify-center gap-3 items-start px-2 md:px-5'>
+                                            <h3 className='font-semibold md:text-xl'>Name: {items.name}</h3>
+                                            <h3 className='font-semibold'>Email: {items.email}</h3>
+                                        </div>
+
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </TabPanel>
 
                 </Tabs>

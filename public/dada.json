@@ -1,65 +1,122 @@
 [
     {
-        "spot_photo": "https://i.ibb.co/ZBHJvp6/toure1.jpg",
-        "tour_type": "City Tour",
-        "trip_title": "Discover Downtown Delights",
-        "price": "$50",
-        "tour_guide_name": "Sumon Paul",
-        "tour_guide_email": "sumon@gmail.com",
-        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+        "tour_guide": "Aisha Rahman",
+        "spot_photo": "https://i.ibb.co/XYvMttF/cox-2.jpg",
+        "location": "Cox's Bazar",
+        "description": "Discover the world's longest natural sea beach at Cox's Bazar with your guide, Aisha Rahman. Miles of golden sands, vibrant local markets, and the soothing sound of the waves make it a perfect destination for relaxation and water activities.",
+        "highlights": [
+            "Longest sea beach",
+            "Inani Beach",
+            "Himchari National Park"
+        ],
+        "activities": [
+            "Beachcombing",
+            "Water sports",
+            "Explore local markets"
+        ],
+        "tips": [
+            "Try local seafood",
+            "Catch a sunrise or sunset at the beach"
+        ]
     },
     {
-        "spot_photo": "https://i.ibb.co/M9pJt1X/tour2.jpg",
-        "tour_type": "Nature Excursion",
-        "trip_title": "Serene Forest Retreat",
-        "price": "$80",
-        "tour_guide_name": "Sumon Paul",
-        "tour_guide_email": "sumon@gmail.com",
-        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+        "tour_guide": "Rahim Khan",
+        "spot_photo": "https://i.ibb.co/2ydzV20/srimangla.jpg",
+        "location": "Srimangal",
+        "description": "Immerse yourself in the lush green tea gardens of Srimangal with your guide, Rahim Khan. Known as the 'Tea Capital of Bangladesh,' this serene town offers tea estate tours, wildlife sanctuaries, and a chance to savor the finest local teas.",
+        "highlights": [
+            "Tea estates",
+            "Lawachara National Park",
+            "Baikka Beel Wetland Sanctuary"
+        ],
+        "activities": [
+            "Tea tasting",
+            "Bird watching",
+            "Nature walks"
+        ],
+        "tips": [
+            "Visit during the tea harvesting season",
+            "Explore the Lawachara canopy walkway"
+        ]
     },
     {
-        "spot_photo": "https://i.ibb.co/r2QXtG2/tour3.jpg",
-        "tour_type": "Historical Journey",
-        "trip_title": "Time Travel in Old Town",
-        "price": "$65",
-        "tour_guide_name": "Sumon Paul",
-        "tour_guide_email": "sumon@gmail.com",
-        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+        "tour_guide": "Sara Ahmed",
+        "spot_photo": "https://i.ibb.co/1GsNG88/sundarban.jpg",
+        "location": "Sundarbans",
+        "description": "Embark on an adventure in the Sundarbans, the largest mangrove forest in the world, with your guide, Sara Ahmed. Cruise through its intricate waterways, spot the elusive Bengal tiger, and witness the unique biodiversity of this UNESCO World Heritage Site.",
+        "highlights": [
+            "Mangrove forest",
+            "Sundarbans National Park",
+            "Tiger spotting"
+        ],
+        "activities": [
+            "Boat safari",
+            "Bird watching",
+            "Visit the Sajnekhali Wildlife Sanctuary"
+        ],
+        "tips": [
+            "Take a guided boat tour",
+            "Respect the natural habitat"
+        ]
     },
     {
-        "spot_photo": "https://i.ibb.co/qjYm1fL/tour-4.jpg",
-        "tour_type": "Beach Escape",
-        "trip_title": "Sun, Sand, and Surf",
-        "price": "$75",
-        "tour_guide_name": "Sumon Paul",
-        "tour_guide_email": "sumon@gmail.com",
-        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+        "tour_guide": "Khaled Khan",
+        "spot_photo": "https://i.ibb.co/TKR0HxQ/bandarban.jpg",
+        "location": "Bandarban",
+        "description": "Explore the picturesque landscapes of Bandarban, nestled in the Chittagong Hill Tracts, with your guide, Khaled Khan. From lush green hills to indigenous communities, this region offers a blend of natural beauty and cultural richness.",
+        "highlights": [
+            "Nilgiri Hills",
+            "Boga Lake",
+            "Tribal villages"
+        ],
+        "activities": [
+            "Hiking",
+            "Visit tribal markets",
+            "Photography"
+        ],
+        "tips": [
+            "Experience traditional tribal hospitality",
+            "Pack comfortable hiking gear"
+        ]
     },
     {
-        "spot_photo": "https://i.ibb.co/9g00nmk/toure.jpg",
-        "tour_type": "Adventure Expedition",
-        "trip_title": "Mountain Summit Trek",
-        "price": "$120",
-        "tour_guide_name": "Sumon Paul",
-        "tour_guide_email": "sumon@gmail.com",
-        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+        "tour_guide": "Fatima Islam",
+        "spot_photo": "https://i.ibb.co/6Zq59hR/sylet.jpg",
+        "location": "Sylhet",
+        "description": "Sylhet beckons with its rolling tea gardens, serene lakes, and spiritual sites, guided by Fatima Islam. Explore the tea estates, visit the Ratargul Swamp Forest, and witness the vibrant culture of this northeastern city.",
+        "highlights": [
+            "Tea gardens",
+            "Ratargul Swamp Forest",
+            "Hazrat Shah Jalal University of Science and Technology"
+        ],
+        "activities": [
+            "Tea garden tour",
+            "Boat trip in Ratargul",
+            "Explore Sylhet city"
+        ],
+        "tips": [
+            "Sample Sylheti cuisine",
+            "Visit the Shah Jalal University campus"
+        ]
     },
     {
-        "spot_photo": "https://i.ibb.co/PNNL33F/tour-place.jpg",
-        "tour_type": "Cultural Immersion",
-        "trip_title": "Art and Heritage Walk",
-        "price": "$55",
-        "tour_guide_name": "Sumon Paul",
-        "tour_guide_email": "sumon@gmail.com",
-        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
-    },
-    {
-        "spot_photo": "https://i.ibb.co/QK0qmyb/cox.jpg",
-        "tour_type": "Foodie Paradise",
-        "trip_title": "Gastronomic Delights Tour",
-        "price": "$70",
-        "tour_guide_name": "Sumon Paul",
-        "tour_guide_email": "sumon@gmail.com",
-        "tour_guid_image": "https://i.ibb.co/dK19YQS/IMG-20230930-171157.jpg"
+        "tour_guide": "Imran Ali",
+        "spot_photo": "https://i.ibb.co/djFkBmd/dhaka.jpg",
+        "location": "Dhaka",
+        "description": "Discover the dynamic capital city of Bangladesh, Dhaka, with your guide, Imran Ali. From historical landmarks to bustling markets, Dhaka offers a vibrant blend of the old and the new, providing a glimpse into the country's rich history and modern development.",
+        "highlights": [
+            "Lalbagh Fort",
+            "Ahsan Manzil",
+            "Dhanmondi Lake"
+        ],
+        "activities": [
+            "City tour",
+            "Visit museums",
+            "Explore local markets"
+        ],
+        "tips": [
+            "Experience Dhaka's street food",
+            "Visit during traditional festivals"
+        ]
     }
 ]

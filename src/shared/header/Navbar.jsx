@@ -36,7 +36,7 @@ const Navbar = () => {
         setIsOpenDashBoard(!setIsOpenDashBoard)
     })
     return (
-        <nav className='absolute z-10 bg-primary bg-opacity-20 left-0 top-0 right-0 text-white  py-2 px-1'>
+        <nav className='absolute z-10 bg-primary bg-opacity-40 left-0 top-0 right-0 text-white  py-2 px-1'>
             <div className="container mx-auto">
                 <div className="flex gap-2 justify-between items-center">
                     <div className="logo">

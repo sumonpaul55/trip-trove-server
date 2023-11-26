@@ -26,7 +26,7 @@ const Login = () => {
                             autoClose: 2000,
                             position: "bottom-right"
                         })
-                        navigate(location?.pathname ? location?.pathname : "/")
+                        navigate(location?.state ? location?.state : "/")
                     }
                 })
                 .catch((err) => {

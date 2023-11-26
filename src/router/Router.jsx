@@ -11,6 +11,9 @@ import AllPackages from '../pages/allPackages/AllPackages';
 import Dashboard from '../pages/dashBoard/Dashboard';
 import Myprofile from '../pages/dashBoard/Myprofile/Myprofile';
 import ManageUsers from '../pages/dashBoard/manageUsers/ManageUsers';
+import PackageDetail from '../pages/allPackages/PackageDetail';
+import SimilarTypeofTour from '../pages/home/tourType/SimilarTypeofTour';
+import AllStories from '../pages/allStories/AllStories';
 
 const router = createBrowserRouter([
     {
@@ -35,6 +38,19 @@ const router = createBrowserRouter([
             {
                 path: "/all-packages",
                 element: <AllPackages></AllPackages>
+            },
+            {
+                path: "/all-Stories",
+                element: <AllStories></AllStories>
+            },
+            {
+                path: "/package-details/:id",
+                loader: ({ params }) => fetch(`http://localhost:5000/packageDetail/${params.id}`),
+                element: <PackageDetail></PackageDetail>
+            },
+            {
+                path: "/tourTypes/:tourName",
+                element: <SimilarTypeofTour></SimilarTypeofTour>
             }
         ]
     },

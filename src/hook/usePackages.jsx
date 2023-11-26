@@ -1,7 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-
 import useAxiosPublic from './useAxiosPublic';
-
 const usePackages = () => {
     const axiosPublic = useAxiosPublic();
 

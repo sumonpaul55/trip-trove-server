@@ -1,0 +1,5 @@
+.tourType {
+    background: linear-gradient(#000000b4, #000000b4), url("../../../assets/tourtype.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
