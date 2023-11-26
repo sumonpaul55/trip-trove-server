@@ -57,7 +57,6 @@ const Register = () => {
                             .then(() => {
                                 setProcessing(false)
                                 toast(`Welcome ${name}`, { autoClose: 2000, position: "bottom-right" })
-                                console.log(userInfo)
                                 // console.log(res.data)
                             })
                         navigate(location?.state ? location?.state : "/")

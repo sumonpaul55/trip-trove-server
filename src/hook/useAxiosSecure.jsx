@@ -9,6 +9,21 @@ const axiosSecure = axios.create({
 })
 
 const useAxiosSecure = () => {
+    axiosSecure.interceptors.request.use(function (config) {
+        // console.log(config)
+        return config
+    }, function (err) {
+        return Promise.reject(err)
+    })
+
+    axiosSecure.interceptors.response.use(function (response) {
+        return response
+    }, function async(error) {
+        // console.log(error)
+        return Promise.reject(error)
+    })
+
+
     return axiosSecure;
 };
 

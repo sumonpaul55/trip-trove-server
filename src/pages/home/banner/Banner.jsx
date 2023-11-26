@@ -2,7 +2,7 @@ import React from 'react';
 import "./banner.css"
 const Banner = () => {
     return (
-        <section className='py-32 banner'>
+        <section className='py-40 md:py-48 banner'>
             <div className="container mx-auto">
                 <div className='h-full flex items-center justify-center'>
                     <div data-aos="fade-up" data-aos-duration="2000" className='w-full'>

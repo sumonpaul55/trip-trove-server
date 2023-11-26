@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -51,7 +50,7 @@ const TourismTravel = () => {
                                             <div className='absolute top-4 -right-full group-hover:right-3 duration-200'>
                                                 <div className='flex relative flex-col justify-center items-center group'>
                                                     <span className='text-xs'>Add to wishlist</span>
-                                                    <FaHeart className='text-red-700 cursor-pointer hover:text-red-600' size={25} />
+                                                    <FaHeart className='text-red-500 cursor-pointer hover:text-red-500' size={35} />
                                                 </div>
                                             </div>
                                         </div>

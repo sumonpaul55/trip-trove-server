@@ -10,6 +10,7 @@ import Login from '../pages/login/Login';
 import AllPackages from '../pages/allPackages/AllPackages';
 import Dashboard from '../pages/dashBoard/Dashboard';
 import Myprofile from '../pages/dashBoard/Myprofile/Myprofile';
+import ManageUsers from '../pages/dashBoard/manageUsers/ManageUsers';
 
 const router = createBrowserRouter([
     {
@@ -42,8 +43,16 @@ const router = createBrowserRouter([
         element: <Dashboard></Dashboard>,
         children: [
             {
+                index: true,
+                element: <Myprofile></Myprofile>
+            },
+            {
                 path: "myProfile",
                 element: <Myprofile></Myprofile>
+            },
+            {
+                path: "manage-users",
+                element: <ManageUsers></ManageUsers>
             }
         ]
     }
