@@ -16,6 +16,7 @@ import SimilarTypeofTour from '../pages/home/tourType/SimilarTypeofTour';
 import AllStories from '../pages/allStories/AllStories';
 import StoryDetail from '../pages/storyDetail/StoryDetail';
 import TourGuideDetails from '../pages/tourGuideDetail/TourGuideDetails';
+import Bookings from '../pages/bookings/Bookings';
 
 const router = createBrowserRouter([
     {
@@ -63,6 +64,11 @@ const router = createBrowserRouter([
                 path: "/story-detail/:id",
                 loader: ({ params }) => fetch(`http://localhost:5000/story-detail/${params.id}`),
                 element: <StoryDetail></StoryDetail>
+            },
+            {
+                path: "/bookings/:id",
+                loader: ({ params }) => fetch(`http://localhost:5000/my-bookings/${params.id}`),
+                element: <Bookings></Bookings>
             }
         ]
     },

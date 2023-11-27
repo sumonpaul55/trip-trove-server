@@ -11,6 +11,7 @@ const Login = () => {
     const { logIn } = useAuth()
     const navigate = useNavigate()
     const location = useLocation();
+    const afterLogin = location.state?.form?.pathname || "/";
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -26,7 +27,7 @@ const Login = () => {
                             autoClose: 2000,
                             position: "bottom-right"
                         })
-                        navigate(location?.state ? location?.state : "/")
+                        navigate(afterLogin)
                     }
                 })
                 .catch((err) => {

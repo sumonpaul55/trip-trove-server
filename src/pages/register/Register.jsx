@@ -20,7 +20,7 @@ const Register = () => {
     const navigate = useNavigate()
     const axiosPublic = useAxiosPublic()
     const [processing, setProcessing] = useState(false)
-
+    const afterLogin = location.state?.form?.pathname || "/";
     const handleSignIn = async (e) => {
         e.preventDefault();
         setProcessing(true)
@@ -57,9 +57,8 @@ const Register = () => {
                             .then(() => {
                                 setProcessing(false)
                                 toast(`Welcome ${name}`, { autoClose: 2000, position: "bottom-right" })
-                                // console.log(res.data)
                             })
-                        navigate(location?.state ? location?.state : "/")
+                        navigate(afterLogin)
                     }
                 }).catch(err => {
                     toast(err.message, {

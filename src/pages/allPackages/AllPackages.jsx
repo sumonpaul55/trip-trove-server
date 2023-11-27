@@ -1,6 +1,7 @@
 import React from 'react';
 import Myhelmet from '../../components/Myhelmet';
 import usePackages from '../../hook/usePackages';
+import { Link } from 'react-router-dom';
 
 const AllPackages = () => {
     const { packages } = usePackages()
@@ -24,11 +25,15 @@ const AllPackages = () => {
                                         <div className='lg:w-2/5 bg-slate-50 p-2 flex flex-col justify-evenly gap-2 items-start'>
                                             <div>
                                                 <h3 className='border-b font-semibold'>Tour Guide Info</h3>
-                                                <img src={items.tour_guid_image} className='w-20 h-20 rounded-full mt-4' alt="" />
+                                                <img src={items.tour_guide_image} className='w-20 h-20 rounded-full mt-4' alt="" />
                                                 <h3 className='border-b border-black mb-2'>Name: {items.tour_guide_name}</h3>
                                                 <h3>Email: {items.tour_guide_email}</h3>
                                             </div>
-                                            <button className='bg-pink-600 text-white p-2'>Add to wishlist</button>
+                                            <div>
+                                                <button className='bg-pink-600 text-white p-1 hover:bg-pink-800 w-full'>Add to wishlist</button>
+                                                <Link to={`/package-details/${items._id}`}><button className='py-1 px-2 hover:bg-pink-800 bg-pink-600 text-white w-full mt-6'>View Packages</button></Link>
+
+                                            </div>
                                         </div>
                                     </div>
                                 ))

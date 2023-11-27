@@ -1,122 +1,158 @@
 [
     {
-        "tour_guide": "Aisha Rahman",
-        "spot_photo": "https://i.ibb.co/XYvMttF/cox-2.jpg",
-        "location": "Cox's Bazar",
-        "description": "Discover the world's longest natural sea beach at Cox's Bazar with your guide, Aisha Rahman. Miles of golden sands, vibrant local markets, and the soothing sound of the waves make it a perfect destination for relaxation and water activities.",
-        "highlights": [
-            "Longest sea beach",
-            "Inani Beach",
-            "Himchari National Park"
-        ],
-        "activities": [
-            "Beachcombing",
-            "Water sports",
-            "Explore local markets"
-        ],
-        "tips": [
-            "Try local seafood",
-            "Catch a sunrise or sunset at the beach"
-        ]
-    },
-    {
-        "tour_guide": "Rahim Khan",
-        "spot_photo": "https://i.ibb.co/2ydzV20/srimangla.jpg",
-        "location": "Srimangal",
-        "description": "Immerse yourself in the lush green tea gardens of Srimangal with your guide, Rahim Khan. Known as the 'Tea Capital of Bangladesh,' this serene town offers tea estate tours, wildlife sanctuaries, and a chance to savor the finest local teas.",
-        "highlights": [
-            "Tea estates",
-            "Lawachara National Park",
-            "Baikka Beel Wetland Sanctuary"
-        ],
-        "activities": [
-            "Tea tasting",
-            "Bird watching",
-            "Nature walks"
-        ],
-        "tips": [
-            "Visit during the tea harvesting season",
-            "Explore the Lawachara canopy walkway"
-        ]
-    },
-    {
-        "tour_guide": "Sara Ahmed",
-        "spot_photo": "https://i.ibb.co/1GsNG88/sundarban.jpg",
-        "location": "Sundarbans",
-        "description": "Embark on an adventure in the Sundarbans, the largest mangrove forest in the world, with your guide, Sara Ahmed. Cruise through its intricate waterways, spot the elusive Bengal tiger, and witness the unique biodiversity of this UNESCO World Heritage Site.",
-        "highlights": [
-            "Mangrove forest",
-            "Sundarbans National Park",
-            "Tiger spotting"
-        ],
-        "activities": [
-            "Boat safari",
-            "Bird watching",
-            "Visit the Sajnekhali Wildlife Sanctuary"
-        ],
-        "tips": [
-            "Take a guided boat tour",
-            "Respect the natural habitat"
-        ]
-    },
-    {
-        "tour_guide": "Khaled Khan",
-        "spot_photo": "https://i.ibb.co/TKR0HxQ/bandarban.jpg",
-        "location": "Bandarban",
-        "description": "Explore the picturesque landscapes of Bandarban, nestled in the Chittagong Hill Tracts, with your guide, Khaled Khan. From lush green hills to indigenous communities, this region offers a blend of natural beauty and cultural richness.",
-        "highlights": [
-            "Nilgiri Hills",
-            "Boga Lake",
-            "Tribal villages"
-        ],
-        "activities": [
-            "Hiking",
-            "Visit tribal markets",
-            "Photography"
-        ],
-        "tips": [
-            "Experience traditional tribal hospitality",
-            "Pack comfortable hiking gear"
-        ]
-    },
-    {
-        "tour_guide": "Fatima Islam",
-        "spot_photo": "https://i.ibb.co/6Zq59hR/sylet.jpg",
-        "location": "Sylhet",
-        "description": "Sylhet beckons with its rolling tea gardens, serene lakes, and spiritual sites, guided by Fatima Islam. Explore the tea estates, visit the Ratargul Swamp Forest, and witness the vibrant culture of this northeastern city.",
-        "highlights": [
-            "Tea gardens",
-            "Ratargul Swamp Forest",
-            "Hazrat Shah Jalal University of Science and Technology"
-        ],
-        "activities": [
-            "Tea garden tour",
-            "Boat trip in Ratargul",
-            "Explore Sylhet city"
-        ],
-        "tips": [
-            "Sample Sylheti cuisine",
-            "Visit the Shah Jalal University campus"
-        ]
-    },
-    {
-        "tour_guide": "Imran Ali",
         "spot_photo": "https://i.ibb.co/djFkBmd/dhaka.jpg",
-        "location": "Dhaka",
-        "description": "Discover the dynamic capital city of Bangladesh, Dhaka, with your guide, Imran Ali. From historical landmarks to bustling markets, Dhaka offers a vibrant blend of the old and the new, providing a glimpse into the country's rich history and modern development.",
-        "highlights": [
-            "Lalbagh Fort",
-            "Ahsan Manzil",
-            "Dhanmondi Lake"
-        ],
-        "activities": [
-            "City tour",
-            "Visit museums",
-            "Explore local markets"
-        ],
-        "tips": [
-            "Experience Dhaka's street food",
-            "Visit during traditional festivals"
+        "tour_type": "City tour",
+        "trip_title": "Discovering Dhaka",
+        "price": "60",
+        "tour_guide_name": "Rahim Khan",
+        "tour_guide_email": "rahim@gmail.com",
+        "tour_guide_image": "https://i.ibb.co/kQfsxfK/images.jpg",
+        "description": "Embark on a cultural journey through the heart of Dhaka with Rahim Khan. Explore historical landmarks, vibrant markets, and delve into the rich cultural heritage of the city.",
+        "tour_plan": [
+            {
+                "description": "Arrive in Dhaka and check into your accommodation. Begin your cultural exploration with a visit to Lalbagh Fort, an iconic historical site in the heart of the city."
+            },
+            {
+                "description": "Arrive in Dhaka and check into your accommodation. Begin your cultural exploration with a visit to Lalbagh Fort, an iconic historical site in the heart of the city."
+            },
+            {
+                "description": "Explore the vibrant markets of Old Dhaka, experiencing the local culture and sampling delicious street food. Visit the National Museum for a deeper understanding of Bangladesh's rich history."
+            }
+        ]
+    },
+    {
+        "spot_photo": "https://i.ibb.co/2ydzV20/srimangla.jpg",
+        "tour_type": "City tour",
+        "trip_title": "Serenity in Sylhet",
+        "price": "55",
+        "tour_guide_name": "Rahim Khan",
+        "tour_guide_email": "farhana@gmail.com",
+        "tour_guide_image": "https://i.ibb.co/kQfsxfK/images.jpg",
+        "description": "Escape to the serene landscapes of Sylhet with Farhana Ahmed. Immerse yourself in the beauty of Ratargul Swamp Forest and experience the tranquility of nature.",
+        "tour_plan": [
+            {
+                "description": "Arrive in Sylhet and check into your accommodation. Begin your nature retreat with a boat trip to Ratargul Swamp Forest, surrounded by lush greenery and diverse wildlife."
+            },
+            {
+                "description": "Visit Hazrat Shah Jalal University of Science and Technology and explore the vibrant campus. Enjoy a serene evening by the lake, surrounded by breathtaking landscapes."
+            }
+        ]
+    },
+    {
+        "spot_photo": "https://i.ibb.co/1GsNG88/sundarban.jpg",
+        "tour_type": "Wildlife Adventure",
+        "trip_title": "Exploring Sundarbans",
+        "price": "80",
+        "tour_guide_name": "Ayesha Rahman",
+        "tour_guide_email": "ayesha@gmail.com",
+        "tour_guide_image": "https://i.ibb.co/cD6WB89/hridoy.jpg",
+        "description": "Embark on a wildlife adventure in the Sundarbans with Ayesha Rahman. Experience a thrilling jungle safari, spot Bengal tigers, and immerse yourself in the untouched beauty of nature.",
+        "tour_plan": [
+            {
+                "description": "Arrive in the Sundarbans and check into your accommodation. Begin your wildlife adventure with a boat safari through the dense mangrove forests, encountering diverse flora and fauna."
+            },
+            {
+                "description": "Arrive in the Sundarbans and check into your accommodation. Begin your wildlife adventure with a boat safari through the dense mangrove forests, encountering diverse flora and fauna."
+            },
+            {
+                "description": "Explore the Karamjol wildlife center and witness the beauty of the Sundarbans. Join Ayesha Rahman for a guided jungle walk and discover the unique biodiversity of the region."
+            }
+        ]
+    },
+    {
+        "spot_photo": "https://i.ibb.co/2ydzV20/srimangla.jpg",
+        "tour_type": "Beach Bliss",
+        "trip_title": "Serenity in Chittagong",
+        "price": "75",
+        "tour_guide_name": "Kamal Ahmed",
+        "tour_guide_email": "kamal@gmail.com",
+        "tour_guide_image": "https://i.ibb.co/cD6WB89/hridoy.jpg",
+        "description": "Experience coastal serenity in Chittagong with Kamal Ahmed. Relax on the sandy beaches, explore vibrant markets, and immerse yourself in the coastal culture.",
+        "tour_plan": [
+            {
+                "description": "Arrive in Chittagong and check into your accommodation. Begin your beach bliss with a relaxing day on the shores of Patenga Beach, enjoying the sound of the waves."
+            },
+            {
+                "description": "Explore Foy's Lake, known for its picturesque landscapes. Visit the vibrant Chittagong Fish Market and indulge in a seafood feast by the coast."
+            }
+        ]
+    },
+    {
+        "spot_photo": "https://i.ibb.co/XYvMttF/cox-2.jpg",
+        "tour_type": "Beach Bliss",
+        "trip_title": "Journey to Rangamati",
+        "price": "65",
+        "tour_guide_name": "Nazia Khan",
+        "tour_guide_email": "nazia@gmail.com",
+        "tour_guide_image": "https://i.ibb.co/9gHg1QS/dado.jpg",
+        "description": "Embark on a hillside adventure in Rangamati with Nazia Khan. Explore serene lakes, tribal villages, and enjoy breathtaking views of the Chittagong Hill Tracts.",
+        "tour_plan": [
+            {
+                "description": "Arrive in Rangamati and check into your accommodation. Begin your hillside adventure with a boat trip on the pristine Kaptai Lake, surrounded by lush green hills."
+            },
+            {
+                "description": "Explore tribal villages and experience the unique culture of the Chakma people. Visit the Hanging Bridge and enjoy panoramic views of the hillside landscapes."
+            }
+        ]
+    },
+    {
+        "spot_photo": "https://i.ibb.co/yB3qm77/bandarban.jpg",
+        "tour_type": "Wildlife Adventure",
+        "trip_title": "Discovering Bandarban",
+        "price": "90",
+        "tour_guide_name": "Arif Khan",
+        "tour_guide_email": "arif@gmail.com",
+        "tour_guide_image": "https://i.ibb.co/9gHg1QS/dado.jpg",
+        "description": "Embark on a mountain expedition in Bandarban with Arif Khan. Explore the highest peaks, visit indigenous communities, and experience the thrill of the hills.",
+        "tour_plan": [
+            {
+                "description": "Arrive in Bandarban and check into your accommodation. Begin your mountain expedition with a trek to Nafakhum, the largest waterfall in Bangladesh, surrounded by lush forests."
+            },
+            {
+                "description": "Arrive in Bandarban and check into your accommodation. Begin your mountain expedition with a trek to Nafakhum, the largest waterfall in Bangladesh, surrounded by lush forests."
+            },
+            {
+                "description": "Explore the Boga Lake, a high-altitude lake nestled amidst the hills. Visit the picturesque Nilgiri Hills for breathtaking panoramic views of the surrounding landscapes."
+            }
+        ]
+    },
+    {
+        "spot_photo": "https://i.ibb.co/PNNL33F/tour-place.jpg",
+        "tour_type": "Seaside Retreat",
+        "trip_title": "Serenity in Kuakata",
+        "price": "85",
+        "tour_guide_name": "Sara Rahman",
+        "tour_guide_email": "sara@gmail.com",
+        "tour_guide_image": "https://i.ibb.co/GnCR82f/IMG-20231018-185250.jpg",
+        "description": "Experience seaside serenity in Kuakata with Sara Rahman. Enjoy breathtaking sunsets, relax on pristine beaches, and immerse yourself in the tranquility of the Bay of Bengal.",
+        "tour_plan": [
+            {
+                "description": "Arrive in Kuakata and check into your accommodation. Begin your seaside retreat with a leisurely day on the beautiful Kuakata beach, known for its stunning sunrise and sunset views."
+            },
+            {
+                "description": "Explore the Kuakata Sea Beach and visit the Lebur Char, a unique geographical feature. Join Sara Rahman for a guided tour of the local fishing villages, experiencing the coastal lifestyle."
+            }
+        ]
+    },
+    {
+        "spot_photo": "https://i.ibb.co/TKR0HxQ/bandarban.jpg",
+        "tour_type": "Wildlife Adventure",
+        "trip_title": "Serenity in Sundarbarn",
+        "price": "85",
+        "tour_guide_name": "Sara Rahman",
+        "tour_guide_email": "sara@gmail.com",
+        "tour_guide_image": "https://i.ibb.co/hRGZwPk/SAVE-20211229-021440.jpg",
+        "description": "Experience seaside serenity in Kuakata with Sara Rahman. Enjoy breathtaking sunsets, relax on pristine beaches, and immerse yourself in the tranquility of the Bay of Bengal.",
+        "tour_plan": [
+            {
+                "description": "Arrive in Kuakata and check into your accommodation. Begin your seaside retreat with a leisurely day on the beautiful Kuakata beach, known for its stunning sunrise and sunset views."
+            },
+            {
+                "description": "Arrive in Kuakata and check into your accommodation. Begin your seaside retreat with a leisurely day on the beautiful Kuakata beach, known for its stunning sunrise and sunset views."
+            },
+            {
+                "description": "Explore the Kuakata Sea Beach and visit the Lebur Char, a unique geographical feature. Join Sara Rahman for a guided tour of the local fishing villages, experiencing the coastal lifestyle."
+            }
         ]
     }
 ]

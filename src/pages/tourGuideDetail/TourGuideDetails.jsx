@@ -7,8 +7,9 @@ const TourGuideDetails = () => {
     console.log(tourGuide)
     return (
         <main className="pt-14 bg-slate-100">
-            <section className='py-20'>
+            <section className='pt-10 pb-20'>
                 <div className="container mx-auto">
+                    <h3 className='font-bold text-center text-xl md:text-3xl mb-10 capitalize'>{name + "'s"} Profile</h3>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 items-center'>
                         <div className='px-10'>
                             <img src={userImg} className='mx-auto max-h-[600px] rounded-xl w-full' alt="" />
