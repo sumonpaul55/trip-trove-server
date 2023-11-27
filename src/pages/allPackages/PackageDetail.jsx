@@ -1,15 +1,33 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-
+import usePackages from '../../hook/usePackages';
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 const PackageDetail = () => {
     const singapackgeData = useLoaderData();
-    // console.log(singapackgeData)
+    const { packages } = usePackages()
     const { spot_photo, tour_guid_image, tour_guide_email, tour_guide_name, tour_type, trip_title, price, description } = singapackgeData;
+    const img = packages?.map((img) => {
+        return { original: img.spot_photo, thumbnail: img.spot_photo }
+    })
+    const images = [...img]
     return (
         <>
-            <main className='pt-14 bg-slate-300 py-20'>
-                <section>
+            <main className='pt-14 bg-slate-50 py-20'>
+                <section className='pt-10 pb-20'>
+                    <div className="container mx-auto">
+                        <div>
+                            <h4 className='text-xl font-semibold md:text-2xl mb-7'>Tour guide will visit following places</h4>
+                            <div>
+                                <ImageGallery items={images} />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className='bg-white py-20'>
                     <div className="container mx-auto  p-2">
+
+                        <h4 className='text-xl font-semibold md:text-2xl mb-7'>About the tour Section</h4>
                         <div className='flex md:flex-row flex-col py-10 gap-8'>
                             <div className='flex-1 text-center' data-aos="fade-right">
                                 <h4 className='border-b text-xl max-w-sm'>Tour guide Info</h4>

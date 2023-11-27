@@ -56,13 +56,13 @@ const StoryDetail = () => {
                         <h4 className='font-bold text-xl md:text-2xl'>Share The Story On social media</h4>
                         <div className='mt-5'>
                             {
-                                !loading && user &&
-                                <SocialShare url={pathname}></SocialShare>
+                                !loading && user ?
+                                    <SocialShare url={pathname}></SocialShare> :
+                                    <div className='flex justify-center flex-col items-center gap-10 border border-black p-4'>
+                                        <h5 className='mt-10 font-semibold text-center'>Your Should login First For Share this Story</h5>
+                                        <Link to="/login" className='text-pink-600 font-bold text-xl'>Login</Link>
+                                    </div>
                             }
-                            <div className='flex justify-center flex-col items-center gap-10 border border-black p-4'>
-                                <h5 className='mt-10 font-semibold text-center'>Your Should login First For Share this Story</h5>
-                                <Link to="/login" className='text-pink-600 font-bold text-xl'>Login</Link>
-                            </div>
                         </div>
                     </div>
                 </div>
