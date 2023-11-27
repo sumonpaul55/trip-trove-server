@@ -81,8 +81,8 @@ const TourismTravel = () => {
                                         <div className='flex-1 flex flex-col justify-center gap-3 items-start px-2 md:px-5'>
                                             <h3 className='font-semibold md:text-xl'>Name: {items.name}</h3>
                                             <h3 className='font-semibold'>Email: {items.email}</h3>
+                                            <Link className='text-white bg-pink-600 px-3 py-1 md:px-5 font-medium' to={`tourGuide-details/${items._id}`}>Details</Link>
                                         </div>
-
                                     </div>
                                 ))
                             }

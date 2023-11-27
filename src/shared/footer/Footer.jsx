@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from "../../assets/logo.png"
 import { FaCopyright } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className='py-20 bg-black text-white bg-opacity-90 px-2'>
@@ -8,7 +9,7 @@ const Footer = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-3 md:gap-2 lg:gap-20'>
                     <div>
                         <div className="logo">
-                            <img src={logo} alt="" className='mb-10 w-1/2 mx-auto lg:mx-0 md:w-3/5' />
+                            <Link to="/"><img src={logo} alt="" className='mb-10 w-1/2 mx-auto lg:mx-0 md:w-3/5' /></Link>
                         </div>
                         <p className='leading-7 text-justify text-slate-300'>Triptrove, your gateway to unforgettable adventures, is a curated travel platform designed to inspire and simplify your journey. Discover handpicked destinations, expert travel tips, and personalized itineraries tailored to your wanderlust. Embark on a seamless exploration of the world with Triptrove, where every trip is a story waiting to be told.</p>
                     </div>
