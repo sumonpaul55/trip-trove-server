@@ -10,11 +10,11 @@ const SimilarTypeofTour = () => {
         queryKey: ["tripType"],
         queryFn: async () => {
             const res = await axiosSecure.get(`/tripType/${tourName}`)
-            console.log("inside function", res.data)
+            // console.log("inside function", res.data)
             return res.data;
         }
     })
-    console.log("trip type", tripType)
+    // console.log("trip type", tripType)
 
     return (
         <main className='bg-slate-100 px-1 pb-20'>

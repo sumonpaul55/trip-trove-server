@@ -4,7 +4,7 @@ import usePackages from '../../hook/usePackages';
 
 const AllPackages = () => {
     const { packages } = usePackages()
-    console.log(packages)
+    // console.log(packages)
     return (
         <>
             <Myhelmet title="All packages"></Myhelmet>

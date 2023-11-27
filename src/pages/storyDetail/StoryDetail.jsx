@@ -1,11 +1,16 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-
+import { Link, useLoaderData } from 'react-router-dom';
+import SocialShare from '../../components/SocialShare';
+import "./StoryDetail.css"
+import useAuth from "../../hook/useAuth"
 const StoryDetail = () => {
     const storyDetailData = useLoaderData();
-    console.log(storyDetailData)
+    const { user, loading } = useAuth()
     const { tour_guide, spot_photo, location, description, highlights, activities, tips } = storyDetailData
-    console.log(Array.isArray(highlights))
+    const pathname = window.location.href;
+
+
+
     return (
         <main className='mt-14 bg-slate-200 pb-40'>
             <div className="container mx-auto">
@@ -47,6 +52,19 @@ const StoryDetail = () => {
                         </div>
                     </div>
                     <p className='mt-10 py-4 px-2 bg-white rounded-md leading-8 tracking-wide'>Description: {description} {description}</p>
+                    <div className='mt-9'>
+                        <h4 className='font-bold text-xl md:text-2xl'>Share The Story On social media</h4>
+                        <div className='mt-5'>
+                            {
+                                !loading && user &&
+                                <SocialShare url={pathname}></SocialShare>
+                            }
+                            <div className='flex justify-center flex-col items-center gap-10 border border-black p-4'>
+                                <h5 className='mt-10 font-semibold text-center'>Your Should login First For Share this Story</h5>
+                                <Link to="/login" className='text-pink-600 font-bold text-xl'>Login</Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
