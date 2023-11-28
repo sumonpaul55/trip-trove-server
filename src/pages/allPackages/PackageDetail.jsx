@@ -22,7 +22,7 @@ const PackageDetail = () => {
                     <div className="container mx-auto">
                         <div>
                             <h4 className='text-xl font-semibold md:text-2xl mb-7'>Tour guide will visit following places</h4>
-                            <div className=''>
+                            <div className='w-full overflow-hidden'>
                                 <ImageGallery items={images} className="overflow-hidden" />
                             </div>
                         </div>

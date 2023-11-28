@@ -118,6 +118,7 @@ const Register = () => {
                                 id="file"
                                 name="image"
                                 type="file"
+                                required
                             />
                         </div>
                         <button type="submit" className='w-full bg-primary text-white py-2 rounded-md'>Submit</button>

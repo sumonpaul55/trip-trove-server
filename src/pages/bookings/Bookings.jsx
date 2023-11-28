@@ -19,6 +19,7 @@ const Bookings = () => {
     const { user } = useAuth()
     const { tourGuide } = useGetTourGuide()
     const { price, spot_photo, tour_guide_email, tour_guide_image, tour_guide_name, trip_title } = bookedData;
+    console.log(price)
     const location = useLocation()
     const handleBookings = async (e) => {
         e.preventDefault()
@@ -43,7 +44,7 @@ const Bookings = () => {
                 const userEmail = user?.email;
                 const touristImg = res.data?.data?.display_url
                 const bookingInfo = {
-                    name, email, date, tourGuide, price, userEmail, spot_photo, tour_guide_email, tour_guide_image, tour_guide_name, touristImg
+                    name, email, date, tourGuide, price, userEmail, spot_photo, tour_guide_email, tour_guide_image, tour_guide_name, touristImg, trip_title
                 }
                 const response = await axiosPublic.post("/myBookings", bookingInfo)
                 if (response.data.insertedId) {

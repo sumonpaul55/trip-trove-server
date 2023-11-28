@@ -16,7 +16,6 @@ const AuthProvider = ({ children }) => {
     const logIn = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
-
     const signInWithGoogle = () => {
         return signInWithPopup(auth, googleProvider)
     }
@@ -49,7 +48,7 @@ const AuthProvider = ({ children }) => {
         return () => {
             unSubcribe();
         }
-    }, [])
+    }, [axiosPublic])
 
     const userInfo = {
         loading, user, signUp, logIn, signInWithGoogle, logOut

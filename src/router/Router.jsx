@@ -17,6 +17,7 @@ import AllStories from '../pages/allStories/AllStories';
 import StoryDetail from '../pages/storyDetail/StoryDetail';
 import TourGuideDetails from '../pages/tourGuideDetail/TourGuideDetails';
 import Bookings from '../pages/bookings/Bookings';
+import MyBookings from '../pages/dashBoard/myBookings/MyBookings';
 
 const router = createBrowserRouter([
     {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
             {
                 path: "manage-users",
                 element: <ManageUsers></ManageUsers>
+            },
+            {
+                path: "bookings",
+                element: <MyBookings></MyBookings>
             }
         ]
     }

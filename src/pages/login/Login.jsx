@@ -39,7 +39,7 @@ const Login = () => {
         },
     });
     return (
-        <section className='mt-14'>
+        <section className='mt-14 pb-10'>
             <div className="container mx-auto">
                 <div className='max-w-[500px] mx-auto bg-slate-300 p-4 mt-20'>
                     <h2 className='font-bold text-center text-2xl'>Login</h2>
