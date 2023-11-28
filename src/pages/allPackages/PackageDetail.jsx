@@ -94,7 +94,7 @@ const PackageDetail = () => {
                 </section>
                 <div className='text-center'>
                     <Link to={`/bookings/${_id}`}>
-                        <button className='px-3 py-1 md:px-5 bg-pink-600 text-white text-xl md:text-3xl hover:scale-110 duration-200'>Book Now</button>
+                        <button className='px-3 py-1 md:px-5 bg-pink-600 text-white text-xl md:text-3xl hover:scale-110 duration-200 cursor-pointer'>Book Now</button>
                     </Link>
                 </div>
             </main>

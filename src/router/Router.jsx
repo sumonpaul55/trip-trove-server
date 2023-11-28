@@ -90,7 +90,7 @@ const router = createBrowserRouter([
                 element: <ManageUsers></ManageUsers>
             },
             {
-                path: "bookings",
+                path: "myBookings",
                 element: <MyBookings></MyBookings>
             }
         ]

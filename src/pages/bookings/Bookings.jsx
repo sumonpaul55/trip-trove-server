@@ -15,17 +15,17 @@ const Bookings = () => {
     const [startDate, setStartDate] = useState(new Date());
     const bookedData = useLoaderData()
     const navigate = useNavigate()
+    const [processing, setProcessing] = useState(false)
     const axiosPublic = useAxiosPublic()
     const { user } = useAuth()
     const { tourGuide } = useGetTourGuide()
     const { price, spot_photo, tour_guide_email, tour_guide_image, tour_guide_name, trip_title } = bookedData;
-    console.log(price)
     const location = useLocation()
     const handleBookings = async (e) => {
+        setProcessing(true)
         e.preventDefault()
         const form = e.target;
         // setProcessing(true)
-
         if (user && user?.email) {
             const imageFile = form.image.files[0]
             // Create FormData object
@@ -43,14 +43,16 @@ const Bookings = () => {
                 const tourGuide = form.tourGuideName.value;
                 const userEmail = user?.email;
                 const touristImg = res.data?.data?.display_url
+                const status = "In review"
                 const bookingInfo = {
-                    name, email, date, tourGuide, price, userEmail, spot_photo, tour_guide_email, tour_guide_image, tour_guide_name, touristImg, trip_title
+                    name, email, date, tourGuide, price, userEmail, spot_photo, tour_guide_email, tour_guide_image, tour_guide_name, touristImg, trip_title, status
                 }
                 const response = await axiosPublic.post("/myBookings", bookingInfo)
                 if (response.data.insertedId) {
+                    setProcessing(false)
                     Swal.fire({
-                        title: "You have to login first!",
-                        text: "You won't be able to book it without login!",
+                        title: "Are you Sure to booking?",
+                        text: "You can managed it form your my booking",
                         icon: "warning",
                         showCancelButton: true,
                         confirmButtonColor: "#3085d6",
@@ -62,10 +64,9 @@ const Bookings = () => {
                                 autoClose: 2000,
                                 position: "bottom-right"
                             })
-                            navigate("/myBookings")
+                            navigate("/dashboard/myBookings")
                         }
                     });
-
                 }
             }
         } else {
@@ -84,6 +85,7 @@ const Bookings = () => {
             });
         }
     }
+
     return (
         <main className='pt-14'>
             <section className='pt-10 pb-20'>
@@ -126,11 +128,15 @@ const Bookings = () => {
                                 </div>
                             </div>
                             <div className='text-center'>
-                                <input type="submit" value="Book Now" className='px-2 py-1 bg-pink-600 text-white mt-10 md:px-8' />
-
+                                <input type="submit" value="Book Now" className='px-2 py-1 bg-pink-600 text-white mt-10 md:px-8 cursor-pointer' />
                             </div>
                         </form>
                     </div>
+                    {
+                        processing && <div className='fixed top-0 left-0 h-screen w-screen bg-black bg-opacity-40 flex justify-center items-center'>
+                            <div className='animate-spin p-4 bg-black'></div>
+                        </div>
+                    }
                 </div>
             </section>
         </main>
