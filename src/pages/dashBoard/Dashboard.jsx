@@ -2,10 +2,10 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../../hook/useAdmin';
 import useTourGuide from '../../hook/useTourGuide';
-
 const Dashboard = () => {
     const [isadmin, isAdminLoading] = useAdmin()
     const [isTourGuide] = useTourGuide()
+
     return (
         <main className='bg-slate-600 pb-20 px-3 w-full'>
             <section>
@@ -20,19 +20,15 @@ const Dashboard = () => {
                                 <NavLink to="/dashboard/addPackages" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Add Packages</NavLink>
                                 <NavLink to="/dashboard/manage-users" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Manage Users</NavLink>
                             </> :
-
                                 isTourGuide ? <>
-
-                                    <NavLink to="/dashboard/myProfile" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Add Packages</NavLink>
+                                    <NavLink to="/dashboard/add-packages" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Add Packages</NavLink>
                                     <NavLink to="/dashboard/myAssignedTour" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>My assigned tour</NavLink>
 
                                 </> : <>
                                     <NavLink to="/dashboard/myProfile" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>My Profile</NavLink>
                                     <NavLink to="/dashboard/myBookings" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>My Bookings</NavLink>
                                     <NavLink to="/dashboard/myWishlist" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>My wishlist</NavLink>
-
                                 </>
-
                         }
 
                     </div>

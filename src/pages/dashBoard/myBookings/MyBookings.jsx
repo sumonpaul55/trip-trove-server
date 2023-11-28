@@ -64,7 +64,6 @@ const MyBookings = () => {
             })
         }
     }, [myBookings, disCounted])
-
     if (!myBookings.length) {
         return <div className='mt-12'><h3 className='text-white font-bold md:text-xl lg:text-2xl text-center'>No bookings found</h3></div>
     }
