@@ -2,9 +2,26 @@ import React from 'react';
 import Myhelmet from '../../components/Myhelmet';
 import usePackages from '../../hook/usePackages';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hook/useAuth';
+import useAxiosPublic from '../../hook/useAxiosPublic';
+import { toast } from 'react-toastify';
 
 const AllPackages = () => {
     const { packages } = usePackages()
+    const { user } = useAuth()
+    const axiosPublic = useAxiosPublic();
+    const handleWishlist = async (items) => {
+        delete (items._id)
+        // console.log(items)
+        items.userEmail = user?.email
+        const res = await axiosPublic.post("/wisth-list", items)
+        if (res.data.insertedId) {
+            toast(`${items.trip_title}`, {
+                autoClose: 2000,
+                position: "bottom-right"
+            })
+        }
+    }
     // console.log(packages)
     return (
         <>
@@ -30,9 +47,8 @@ const AllPackages = () => {
                                                 <h3>Email: {items.tour_guide_email}</h3>
                                             </div>
                                             <div>
-                                                <button className='bg-pink-600 text-white p-1 hover:bg-pink-800 w-full'>Add to wishlist</button>
+                                                <button className='bg-pink-600 text-white p-1 hover:bg-pink-800 w-full' onClick={() => { handleWishlist(items) }}>Add to wishlist</button>
                                                 <Link to={`/package-details/${items._id}`}><button className='py-1 px-2 hover:bg-pink-800 bg-pink-600 text-white w-full mt-6'>View Packages</button></Link>
-
                                             </div>
                                         </div>
                                     </div>

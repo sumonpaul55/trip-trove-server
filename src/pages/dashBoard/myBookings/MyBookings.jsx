@@ -9,17 +9,18 @@ import useAuth from '../../../hook/useAuth';
 const MyBookings = () => {
     const [disCounted, setDisCounted] = useState(false)
     const axiosPublic = useAxiosPublic()
+    const { width, height } = useWindowSize()
     const axiosSecure = useAxiosSecure();
     const { user } = useAuth()
-    const { width, height } = useWindowSize()
     const { data: myBookings = [], refetch } = useQuery({
-        queryKey: ["mybookings"],
+        queryKey: ["mybookings", user?.email],
+        enabled: true,
         queryFn: async () => {
             const res = await axiosSecure.get(`/my-allBookings?email=${user?.email}`);
             return res.data
         }
     })
-    // handle cance 
+
     const handleDelete = (id) => {
         Swal.fire({
             title: "Are you sure?",
@@ -42,11 +43,9 @@ const MyBookings = () => {
                             refetch()
                         }
                     })
-
             }
         });
     }
-    // console.log(myBookings)
     useEffect(() => {
         if (myBookings?.length > 3) {
             setDisCounted(true)
@@ -55,13 +54,9 @@ const MyBookings = () => {
                 text: "You have got a discount",
                 icon: "success"
             })
-        } else {
+        }
+        else {
             setDisCounted(false)
-            Swal.fire({
-                title: "Opps!",
-                text: "You have lost your discount",
-                icon: "success"
-            })
         }
     }, [myBookings, disCounted])
     if (!myBookings.length) {

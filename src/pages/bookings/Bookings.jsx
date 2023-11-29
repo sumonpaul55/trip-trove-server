@@ -11,6 +11,7 @@ import useAxiosPublic from '../../hook/useAxiosPublic';
 import { toast } from 'react-toastify';
 const image_apiKey = import.meta.env.VITE_IMAGE_API_KEY
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_apiKey}`
+
 const Bookings = () => {
     const [startDate, setStartDate] = useState(new Date());
     const bookedData = useLoaderData()
@@ -25,14 +26,11 @@ const Bookings = () => {
         setProcessing(true)
         e.preventDefault()
         const form = e.target;
-        // setProcessing(true)
         if (user && user?.email) {
             const imageFile = form.image.files[0]
-            // Create FormData object
             const formData = new FormData();
             formData.append('key', image_apiKey);
             formData.append('image', imageFile);
-            // Make the API request
             const res = await axios.post(image_hosting_api, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });

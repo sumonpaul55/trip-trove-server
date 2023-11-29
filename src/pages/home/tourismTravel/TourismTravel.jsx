@@ -6,10 +6,26 @@ import { Link } from 'react-router-dom';
 import usePackages from '../../../hook/usePackages';
 import overview from "../../../assets/overview.jpg"
 import useGetTourGuide from '../../../hook/useGetTourGuide';
+import useAxiosPublic from '../../../hook/useAxiosPublic';
+import { toast } from 'react-toastify';
+import useAuth from '../../../hook/useAuth';
 const TourismTravel = () => {
     const { packages } = usePackages()
     const { tourGuide } = useGetTourGuide()
-
+    const { user } = useAuth()
+    const axiosPublic = useAxiosPublic();
+    const handleWishlist = async (items) => {
+        delete (items._id)
+        // console.log(items)
+        items.userEmail = user?.email
+        const res = await axiosPublic.post("/wisth-list", items)
+        if (res.data.insertedId) {
+            toast(`${items.trip_title}`, {
+                autoClose: 2000,
+                position: "bottom-right"
+            })
+        }
+    }
     return (
         <section className='py-20 px-1 overflow-hidden'>
             <div className="container m-auto">
@@ -52,7 +68,9 @@ const TourismTravel = () => {
                                             <div className='absolute top-4 -right-full group-hover:right-3 duration-200'>
                                                 <div className='flex relative flex-col justify-center items-center group'>
                                                     <span className='text-xs'>Add to wishlist</span>
-                                                    <FaHeart className='text-red-500 cursor-pointer hover:text-red-500' size={35} />
+                                                    <button onClick={() => { handleWishlist(items) }}>
+                                                        <FaHeart className='text-red-500 cursor-pointer hover:text-red-500' size={35} />
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>

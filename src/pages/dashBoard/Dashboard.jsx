@@ -30,7 +30,6 @@ const Dashboard = () => {
                                     <NavLink to="/dashboard/myWishlist" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>My wishlist</NavLink>
                                 </>
                         }
-
                     </div>
 
                     <div className='w-5/6 overflow-x-hidden'>
