@@ -6,7 +6,7 @@ import useAuth from "../../hook/useAuth"
 const StoryDetail = () => {
     const storyDetailData = useLoaderData();
     const { user, loading } = useAuth()
-    const { tour_guide, spot_photo, location, description, highlights, activities, tips } = storyDetailData
+    const { tour_guide, spot_photo, location, description, tips } = storyDetailData
     const pathname = window.location.href;
 
 
@@ -19,7 +19,7 @@ const StoryDetail = () => {
                     <img src={spot_photo} alt="" className='mt-6 rounded-lg' />
                     <address className='font-bold mt-2'>Location: {location}</address>
                     <div className='flex justify-between mt-4'>
-                        <div>
+                        {/* <div>
                             <h3 className='font-bold text-xl pb-2'>highlights</h3>
                             <div className='flex flex-col'>
                                 {
@@ -39,7 +39,7 @@ const StoryDetail = () => {
                                     ))
                                 }
                             </div>
-                        </div>
+                        </div> */}
                         <div>
                             <h3 className='font-bold text-xl pb-2'>Tips</h3>
                             <div className='flex flex-col'>

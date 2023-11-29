@@ -15,8 +15,8 @@ const AllStories = () => {
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 mt-20' data-aos="fade-up">
                             {
                                 !isLoading && story?.map((items, idx) => (
-                                    <Link key={idx} to={`/story-detail/${items._id}`} className='hover:scale-105 duration-200'>
-                                        <div key={idx} className='shadow border p-1'>
+                                    <Link key={idx} to={`/story-detail/${items._id}`} className='hover:scale-105 duration-200 shadow border p-1'>
+                                        <div key={idx} className=''>
                                             <img src={items?.spot_photo} alt="" />
                                             <div className='pb-3 px-2'>
                                                 <h3 className='mt-3 font-medium'>Tour Guide: {items?.tour_guide}</h3>

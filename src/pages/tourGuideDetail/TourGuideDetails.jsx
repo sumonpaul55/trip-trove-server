@@ -65,36 +65,38 @@ const TourGuideDetails = () => {
                     </div>
                 </div>
             </section>
-            <section className='py-20 bg-slate-300'>
-                <div className="container mx-auto">
-                    <h3 className='text-xl md:text-2xl lg:text-3xl font-bold text-center py-10'>Review</h3>
-                    <div className='max-w-[500px] mx-auto'>
-                        <form onSubmit={handleSubmit}>
-                            <div>
+            {
+                <section className='py-20 bg-slate-300'>
+                    <div className="container mx-auto">
+                        <h3 className='text-xl md:text-2xl lg:text-3xl font-bold text-center py-10'>Review</h3>
+                        <div className='max-w-[500px] mx-auto'>
+                            <form onSubmit={handleSubmit}>
                                 <div>
-                                    <label htmlFor=""> Please rate</label>
-                                    <select name="rate" className='w-full py-3 px-3 rounded-md' id="">
-                                        <option value="">select</option>
-                                        <option value="1">1 poor</option>
-                                        <option value="2">2 bad</option>
-                                        <option value="3">3 good</option>
-                                        <option value="4">4 best</option>
-                                        <option value="5">5 better</option>
-                                    </select>
+                                    <div>
+                                        <label htmlFor=""> Please rate</label>
+                                        <select name="rate" className='w-full py-3 px-3 rounded-md' id="">
+                                            <option value="">select</option>
+                                            <option value="1">1 poor</option>
+                                            <option value="2">2 bad</option>
+                                            <option value="3">3 good</option>
+                                            <option value="4">4 best</option>
+                                            <option value="5">5 better</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label htmlFor="">Comment</label>
+                                        <textarea name="comment" className='w-full rounded-md p-3' id="" ></textarea>
+                                    </div>
                                 </div>
-                                <div>
-                                    <label htmlFor="">Comment</label>
-                                    <textarea name="comment" className='w-full rounded-md p-3' id="" ></textarea>
-                                </div>
-                            </div>
-                            <div className='text-center mt-1.5'>
-                                <input type="submit" value="post" className='mx-auto bg-slate-700 text-white px-3 hover:text-pink-700 cursor-pointer rounded-md md:px-20 font-bold md:text-xl py-2' />
+                                <div className='text-center mt-1.5'>
+                                    <input type="submit" value="post" className='mx-auto bg-slate-700 text-white px-3 hover:text-pink-700 cursor-pointer rounded-md md:px-20 font-bold md:text-xl py-2' />
 
-                            </div>
-                        </form>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            }
         </main>
     );
 };

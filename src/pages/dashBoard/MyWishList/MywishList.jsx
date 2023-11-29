@@ -9,14 +9,13 @@ const MywishList = () => {
     const axiosPublic = useAxiosPublic()
     const { user } = useAuth()
     const { data: myWishlist = [], refetch } = useQuery({
-        queryKey: ["myWishlists", user?.email],
+        queryKey: ["myWishlists", user.email],
         enabled: true,
         queryFn: async () => {
             const res = await axiosPublic.get(`/my-allWishlist?email=${user?.email}`)
             return res.data
         }
     })
-    console.log(myWishlist)
 
     const handleDelete = (id) => {
         Swal.fire({
@@ -29,7 +28,7 @@ const MywishList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                axiosPublic.delete(`/packages/${id}`)
+                axiosPublic.delete(`/wishlist-delete/${id}`)
                     .then(res => {
                         if (res.data.deletedCount) {
                             Swal.fire({

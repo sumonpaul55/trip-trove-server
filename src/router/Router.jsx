@@ -18,6 +18,8 @@ import Bookings from '../pages/bookings/Bookings';
 import MyBookings from '../pages/dashBoard/myBookings/MyBookings';
 import MywishList from '../pages/dashBoard/MyWishList/MywishList';
 import WishListDetails from '../pages/dashBoard/wishlistDetails/WishListDetails';
+import AddPackage from '../pages/dashBoard/addPackage/AddPackage';
+import MyAssignedTour from '../pages/dashBoard/myassignedTour/MyAssignedTour';
 
 const router = createBrowserRouter([
     {
@@ -82,6 +84,10 @@ const router = createBrowserRouter([
                 element: <Myprofile></Myprofile>
             },
             {
+                path: "AssignedTour",
+                element: <MyAssignedTour></MyAssignedTour>
+            },
+            {
                 path: "myProfile",
                 element: <Myprofile></Myprofile>
             },
@@ -89,6 +95,11 @@ const router = createBrowserRouter([
                 path: "manage-users",
                 element: <ManageUsers></ManageUsers>
             },
+            {
+                path: "addPackage",
+                element: <AddPackage></AddPackage>
+            }
+            ,
             {
                 path: "myBookings",
                 element: <MyBookings></MyBookings>
@@ -101,7 +112,7 @@ const router = createBrowserRouter([
                 path: "w-package-details/:id",
                 loader: ({ params }) => fetch(`http://localhost:5000/wishlist-detail/${params.id}`),
                 element: <WishListDetails></WishListDetails>
-            }
+            },
 
         ]
     }
