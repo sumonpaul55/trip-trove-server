@@ -17,6 +17,7 @@ import TourGuideDetails from '../pages/tourGuideDetail/TourGuideDetails';
 import Bookings from '../pages/bookings/Bookings';
 import MyBookings from '../pages/dashBoard/myBookings/MyBookings';
 import MywishList from '../pages/dashBoard/MyWishList/MywishList';
+import WishListDetails from '../pages/dashBoard/wishlistDetails/WishListDetails';
 
 const router = createBrowserRouter([
     {
@@ -95,6 +96,11 @@ const router = createBrowserRouter([
             {
                 path: "myWishlist",
                 element: <MywishList></MywishList>
+            },
+            {
+                path: "w-package-details/:id",
+                loader: ({ params }) => fetch(`http://localhost:5000/wishlist-detail/${params.id}`),
+                element: <WishListDetails></WishListDetails>
             }
 
         ]

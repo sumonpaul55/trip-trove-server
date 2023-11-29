@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import useAuth from '../../../hook/useAuth';
 import useAxiosPublic from '../../../hook/useAxiosPublic';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const MywishList = () => {
     const axiosPublic = useAxiosPublic()
@@ -65,7 +66,9 @@ const MywishList = () => {
                                 <td className='border'><img src={items.spot_photo} className='w-24 h-20 mx-auto m-2' alt="" /></td>
                                 <td className='border text-center font-bold'>{items.tour_guide_name}</td>
                                 <td className='border text-center'>${items.price}</td>
-                                <td className='border text-center'>Details</td>
+                                <td className='border text-center'>
+                                    <Link to={`/dashboard/w-package-details/${items._id}`} className='px-4 hover:bg-pink-700 py-1 bg-slate-800 rounded-md'>Details</Link>
+                                </td>
                                 <td className='border text-center'><button className={`px-4 hover:bg-pink-700 py-1 bg-slate-800 rounded-md`} onClick={() => handleDelete(items._id)}>Delete</button></td>
                             </tr>
                         ))
