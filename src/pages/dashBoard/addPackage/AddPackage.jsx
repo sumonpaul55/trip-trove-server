@@ -86,19 +86,18 @@ const AddPackage = () => {
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-9'>
                     <div>
-                        <label htmlFor="">tour_guide_image</label>
-                        <input type="text" name='tour_guide_image' className='w-full p-3 py-2 rounded-md bg-white text-black font-semibold' placeholder='tour_guide_image' required />
+                        <label htmlFor="">tour_guide_image (URL)</label>
+                        <input type="text" name='tour_guide_image' className='w-full p-3 py-2 rounded-md bg-white text-black font-semibold' placeholder='tour_guide_image (URL)' required />
                     </div>
                     <div>
                         <label htmlFor="">description</label>
-                        <textarea name="description" rows="1" className='w-full p-3 py-2 rounded-md bg-white text-black font-semibold'></textarea>
+                        <textarea name="description" rows="1" className='w-full p-3 py-2 rounded-md bg-white text-black font-semibold' required></textarea>
                     </div>
                 </div>
                 <div>
                     <h1 className='font-bold text-xl'>Tour Plan</h1>
                     <div>
-
-                        <label htmlFor="">Day-1</label> <input type="text" name='day1' className='w-full p-3 py-2 rounded-md bg-white text-black font-semibold' placeholder='day-1' />
+                        <label htmlFor="">Day-1</label> <input type="text" name='day1' className='w-full p-3 py-2 rounded-md bg-white text-black font-semibold' required placeholder='day-1' />
                     </div>
                     <label htmlFor="">Day-2</label> <input type="text" name='day2' className='w-full p-3 py-2 rounded-md bg-white text-black font-semibold' placeholder='day-2' />
                 </div>

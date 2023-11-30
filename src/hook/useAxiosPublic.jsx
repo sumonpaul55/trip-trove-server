@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const url = `https://trip-trove-server.vercel.app`
+const url = `http://localhost:5000`
 
 const axiosPublic = axios.create({
     baseURL: url,

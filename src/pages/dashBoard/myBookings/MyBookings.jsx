@@ -20,7 +20,6 @@ const MyBookings = () => {
             return res.data
         }
     })
-
     const handleDelete = (id) => {
         Swal.fire({
             title: "Are you sure?",
@@ -34,7 +33,8 @@ const MyBookings = () => {
             if (result.isConfirmed) {
                 axiosPublic.delete(`/packages/${id}`)
                     .then(res => {
-                        if (res.data.deletedCount) {
+                        // console.log(res.data)
+                        if (res.data.result.deletedCount) {
                             Swal.fire({
                                 title: "Canceled!",
                                 text: "Your bookings has been canceled",

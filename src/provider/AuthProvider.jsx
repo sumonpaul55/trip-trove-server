@@ -26,7 +26,7 @@ const AuthProvider = ({ children }) => {
         const unSubcribe = onAuthStateChanged(auth, curentUser => {
             setUser(curentUser)
             const userInfo = {
-                email: setUser?.email
+                email: curentUser?.email
             }
             if (curentUser) {
                 // assign get token store client

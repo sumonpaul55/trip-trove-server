@@ -3,8 +3,8 @@ import useAuth from './useAuth';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
-// https://trip-trove-server.vercel.app
-const url = `https://trip-trove-server.vercel.app`
+// http://localhost:5000
+const url = `http://localhost:5000`
 
 const axiosSecure = axios.create({
     baseURL: url,

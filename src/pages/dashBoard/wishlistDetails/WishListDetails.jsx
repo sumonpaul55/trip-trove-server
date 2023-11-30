@@ -5,7 +5,7 @@ const WishListDetails = () => {
     const wishlistData = useLoaderData()
     const { trip_title, tour_type, price, tour_guide_name, tour_guide_image, description, spot_photo, tour_guide_email
     } = wishlistData;
-    console.log(wishlistData)
+    // console.log(wishlistData)
     return (
         <div className='ml-20 bg-slate-500 p-6 rounded-lg'>
             <div className='text-white grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-7'>
