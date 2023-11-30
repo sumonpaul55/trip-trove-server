@@ -60,9 +60,7 @@ const MyAssignedTour = () => {
                                 <td className='text-center'>{idx + 1}</td>
                                 <td className='border text-center'>{items.status !== "canceled" && items.trip_title}</td>
                                 <td className='border text-center'>{items.status !== "canceled" && items.name}</td>
-                                {/* <td className=''>
-                                    <img src={items.touristImg} className='w-20 h-20 rounded-full mx-auto my-1' alt="" />
-                                </td> */}
+
                                 <td className='border text-center'>{items.date}</td>
                                 <td className='border text-center'>${items.price}</td>
                                 <td className='border text-center'><button className='px-2 py-1 bg-slate-700 shadow my-2' onClick={() => handleAccept(items._id)}>Accept</button></td>

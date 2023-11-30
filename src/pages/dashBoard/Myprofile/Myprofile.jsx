@@ -74,6 +74,7 @@ const Myprofile = () => {
             {
                 specificUsers?.role === "user" &&
                 <div className="md:max-w-[900px]">
+                    <h3 className='text-white font-bold text-xl md:text-2xl'>Add a story</h3>
                     <form onSubmit={handleStorySubmit} className='mt-10 text-white'>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10'>
                             <div>

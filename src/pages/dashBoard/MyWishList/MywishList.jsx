@@ -9,7 +9,7 @@ const MywishList = () => {
     const axiosPublic = useAxiosPublic()
     const { user } = useAuth()
     const { data: myWishlist = [], refetch } = useQuery({
-        queryKey: ["myWishlists", user.email],
+        queryKey: ["myWishlists", user?.email],
         enabled: true,
         queryFn: async () => {
             const res = await axiosPublic.get(`/my-allWishlist?email=${user?.email}`)
