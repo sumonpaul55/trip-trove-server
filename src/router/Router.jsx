@@ -20,6 +20,8 @@ import MywishList from '../pages/dashBoard/MyWishList/MywishList';
 import WishListDetails from '../pages/dashBoard/wishlistDetails/WishListDetails';
 import AddPackage from '../pages/dashBoard/addPackage/AddPackage';
 import MyAssignedTour from '../pages/dashBoard/myassignedTour/MyAssignedTour';
+import Blog from '../pages/blog/Blog';
+import Contact from '../pages/contact/Contact';
 
 const router = createBrowserRouter([
     {
@@ -48,6 +50,15 @@ const router = createBrowserRouter([
             {
                 path: "/all-Stories",
                 element: <AllStories></AllStories>
+            },
+            {
+                path: "/blogs",
+                element: <Blog></Blog>
+            },
+            {
+                path: "/about-us",
+                element: <Contact></Contact>
+
             },
             {
                 path: "/package-details/:id",
