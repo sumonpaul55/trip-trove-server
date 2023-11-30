@@ -70,7 +70,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/package-details/:id",
-                loader: ({ params }) => fetch(`http://localhost:5000/packageDetail/${params.id}`),
+                loader: ({ params }) => fetch(`https://trip-trove-server.vercel.app/packageDetail/${params.id}`),
                 element: <PackageDetail></PackageDetail>
             },
             {
@@ -79,17 +79,17 @@ const router = createBrowserRouter([
             },
             {
                 path: "/tourGuide-details/:id",
-                loader: ({ params }) => fetch(`http://localhost:5000/tourGuide/${params.id}`),
+                loader: ({ params }) => fetch(`https://trip-trove-server.vercel.app/tourGuide/${params.id}`),
                 element: <TourGuideDetails></TourGuideDetails>
             },
             {
                 path: "/story-detail/:id",
-                loader: ({ params }) => fetch(`http://localhost:5000/story-detail/${params.id}`),
+                loader: ({ params }) => fetch(`https://trip-trove-server.vercel.app/story-detail/${params.id}`),
                 element: <StoryDetail></StoryDetail>
             },
             {
                 path: "/bookings/:id",
-                loader: ({ params }) => fetch(`http://localhost:5000/my-bookings/${params.id}`),
+                loader: ({ params }) => fetch(`https://trip-trove-server.vercel.app/my-bookings/${params.id}`),
                 element: <Bookings></Bookings>
             }
         ]
@@ -129,7 +129,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "w-package-details/:id",
-                loader: ({ params }) => fetch(`http://localhost:5000/wishlist-detail/${params.id}`),
+                loader: ({ params }) => fetch(`https://trip-trove-server.vercel.app/wishlist-detail/${params.id}`),
                 element: <WishListDetails></WishListDetails>
             },
 
