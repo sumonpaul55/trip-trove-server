@@ -22,11 +22,14 @@ import AddPackage from '../pages/dashBoard/addPackage/AddPackage';
 import MyAssignedTour from '../pages/dashBoard/myassignedTour/MyAssignedTour';
 import Blog from '../pages/blog/Blog';
 import Contact from '../pages/contact/Contact';
+import ErrorPage from '../shared/Error';
+import About from '../pages/about us/About';
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
@@ -56,8 +59,13 @@ const router = createBrowserRouter([
                 element: <Blog></Blog>
             },
             {
-                path: "/about-us",
+                path: "/contact-us",
                 element: <Contact></Contact>
+
+            },
+            {
+                path: "/about-us",
+                element: <About></About>
 
             },
             {

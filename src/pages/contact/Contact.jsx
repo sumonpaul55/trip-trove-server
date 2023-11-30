@@ -8,7 +8,7 @@ const Contact = () => {
                     <div>
                         <h2 className='text-xl md:text-3xl text-center font-bold lg:text-4xl'>Contact us</h2>
                     </div>
-                    <div className=' bg-slate-400 p-5 max-w-[600px] mx-auto rounded-lg'>
+                    <div className=' bg-slate-400 p-5 max-w-[600px] mx-auto rounded-lg mt-20'>
                         <form action="" className='space-y-5'>
                             <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10'>
                                 <div>
