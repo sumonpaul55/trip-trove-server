@@ -18,4 +18,14 @@ Project Features:
 
 
 Dashboard:
-In this project I have implemented
+In this project I have implemented 3 types of dashboard 1. users dashboard 2. admin dashboard 3. tourguide dashboard 
+
+Individual user's have individual interface's 
+
+* Each and everybody can manage their required changes from dashboard.
+* User can access a limited number of functionality
+* tourguide will adopt by admin
+* user and tourguide can't access admins's funtionality
+*
+
+
